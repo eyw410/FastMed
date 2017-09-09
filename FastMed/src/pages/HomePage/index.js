@@ -4,12 +4,22 @@ import {
   Text,
   View
 } from 'react-native'
+import Button from '../../components/Button'
 import Map from '../../components/Map'
 
 export default class HomePage extends Component {
+  onClick = () => {
+    console.log('whats up fam')
+  }
   render() {
     return (
-      <Map />
+      <View style={{flex:1}}>
+        <Button 
+          text='Next Page'
+          onPress={this.onClick}
+        />
+        <Map />
+      </View>
     )
   }
 }
@@ -20,6 +30,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
-  },
   },
 });
